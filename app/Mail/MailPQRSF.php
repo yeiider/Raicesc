@@ -21,7 +21,7 @@ class MailPQRSF extends Mailable
      public function __construct($datos)
     {
         $this->contenido=$datos;
-        $this->subject= $datos['motivo'];
+        $this->subject= $datos['motivo'] . $datos['radicado'];
     }
 
     /**

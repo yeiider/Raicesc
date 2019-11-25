@@ -193,79 +193,58 @@
     .conte{
       font-weight: 300;
     }
+    .p-title{
+    	text-transform: capitalize;
+    }
+    body{
+    	font-family:'proxima_novablack' ,sans-serif
+    }
 
   </style>
 </head>
 <body>
 
   <div class="col-1"></div>
-  <div class=" mt-3 ">
-         <div class="container">
-     {{date('d/M/y - h:m A')}}
-     <div class="row">
-      <div class="col-8">
-        <h2>Nombre: <br><strong>{{$contenido['nombre']}}</strong></h2>
-      </div>
-      <div class="col-4"><h1>Radicado</h1> 
-        <h3 class="text-red">{{$contenido['radicado']}}</h3>
-      </div>
-    </div>
+  <div class=" mt-3" >
+      <div class="container">
+      	<div class="row">
+      		<div class="col-8" style="margin-left: -18px">
+      			 {{date('d-M-y    h:m A')}}
+      		</div>
+      		<div class="col-4" style="margin-top: -3rem">
+      				<img src="assets/img/logo.png" width="200" alt="">
+      		</div>
+      	</div>
+    
+     <div class="row" style="margin-top: -5rem">
+     	<div class="col-7" style="margin-left: -18px">
+     		<p class="p-title " style="margin-top: 6rem ">Sr: {{$contenido['nombre']}}</p>
+     	</div>
+     	<div class="col-5" >
+     		<p class="p-title " style="margin-top: 6rem ">Radicado: <span style="color: red">{{$contenido['radicado']}}</span></p>
+     	</div>
+     </div>
+     <div class="row" style="margin-top: 3rem">
+     	<p style="text-align: justify;">Para <strong>GLOABAL RAICESC S.A.S.</strong> es muy importante dar respuesta a tu solicitud de manera pertinente,  así podemos mejorar la calidad de nuestros servicios generando oportunidades tanto para la empresa como para nuestros clientes, por lo tanto se responderá a tu requerimiento  en los datos de contactos dados en el formulario.</p>
+     </div>
 
-    <div class="text">
-      <p class="title">Tipo de Solicitud: <span class="conte bg-info">{{$contenido['motivo']}}</span></p>
-    </div>
-    <div class="text">
-      <p class="title">Municipio: <span class="conte">{{$contenido['municipio']}}</span></p>
-    </div>
-    <div class="text">
-      <p class="title">Ciudad o Municipio: <span class="conte">{{$contenido['razon']}}</span></p>
-    </div>
-    <div class="text">
-      <p class="title">Razón Social: <span class="conte">{{$contenido['razon']}}</span></p>
-    </div>
-    <div class="text">
-      <p class="title">Numero de documento de identidad: <span class="conte">{{$contenido['documento']}}</span></p>
-    </div>
-     <div class="text">
-      <p class="title">Nombre de Contacto: <span class="conte">{{$contenido['nombre']}}</span></p>
-    </div>
-    <div class="text">
-      <p class="title">Dirección de notificación: <span class="conte">{{$contenido['direccion']}}</span></p>
-    </div>
-    <div class="text">
-      <div class="row">
-        <div class="col-5">
-         <p class="title">Teléfono fijo: <span class="conte">{{$contenido['telefono']}}</span></p>
-       </div>
+     <div class="row" style="margin-top: 2rem">
+     	<p style="margin: 0; text-transform: capitalize;">Motivo: <strong>{{$contenido['motivo']}}</strong></p>
+     	<p style="margin: 0; text-transform: ;">E-mail: {{$contenido['email']}}</p>
+        <p style="margin: 0; text-transform: capitalize;">Teléfono fijo: {{$contenido['telefono']}}  Ext: {{$contenido['extension']}}</p>
+        <p style="margin: 0; text-transform: capitalize;">Teléfono: {{$contenido['celular']}}</p>
+        <p style="margin: 0; text-transform: capitalize;">Dirección: {{$contenido['direccion']}}</p>
+     </div>
 
-       <div class="col-7">
-        <p class="title">Ext: <span class="conte">{{$contenido['extension']}}</span></p>
-      </div>
-    </div>
-  </div>
-    <div class="text">
-      <div class="row">
-        <div class="col-5">
-         <p class="title">Celular: <span class="conte">{{$contenido['celular']}}</span></p>
-       </div>
+     <div class="row" style="margin-top:  2rem">
+     	<p style="text-align: justify;">Si uno de estos datos fueron ingresados de manera incorrecta enviá un correo a admin@raicesc.net con el numero de radicado correspondiente a tu solicitud para modificar la información.</p>
+     </div>
+     <div class="row" style="">
+     	<p style="text-align: justify;">No olvides que ahora en nuestra pagina web <a href="https://www.raicesc.net">https://www.raicesc.net</a> puedes consultar tu saldo y realizar el pago de tu factura de manera virtual fácil y rápido. </p> 
+     </div>
+     
 
-       <div class="col-7">
-        <p class="title">E-Mail: <span class="conte">{{$contenido['email']}}</span></p>
-      </div>
-    </div>
-  </div>
-
-     <div class="text">
-       
-      <p class="title">Hechos en que se fundamenta la Petición, Queja o Recurso:</p><br>
-      <p class="conte">{{$contenido['message']}}</p>
-    </div>
-    <div class="mt-3 bg-info">
-      <h3>Este mensaje se ha envido a Global Raices, Junto con tu documento abjunto si lo has cargado </h3>
-    </div>
-
-  </div>
-
+    
 </div>
 
 </div>

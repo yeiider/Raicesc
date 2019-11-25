@@ -17,16 +17,18 @@ class PQRSF extends Controller
      $datos=$request->all();
    
      $c=array('soporte@raicesc.net','admin@raicec.net','yeideradrian.noba@gmail.com');
-
+     
    
-    	  Mail::to('admin@raicesc.net', $datos['nombre']. ',' .$datos['motivo'])->send(new MailPQRSF($datos));
+   
+   
+      //Mail::to('admin@raicesc.net', $datos['nombre']. ',' .$datos['motivo'])->send(new MailPQRSF($datos));
    
 
     $contenido=$request->all();
   
-  $pdf=\PDF::loadView('emails.responsepqrsf', compact('contenido'));
+  $pdf=\PDF::loadView('pdf.pqrf', compact('contenido'));
   //return new MailPQRSF($datos);
-  return $pdf->download('responsepqrsf.pdf');
+  return $pdf->stream('responsepqrsf.pdf');
     
    
    }
