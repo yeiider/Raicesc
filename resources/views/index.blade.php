@@ -26,13 +26,13 @@ style="background-color: {{$datos['bg_nav']}}"
       <a class="nav-link js-scroll-trigger" href="#about">Acerca de</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link js-scroll-trigger" href="#team">Noticias</a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
     </li>
     <li class="nav-item">
       <a class="nav-link js-scroll-trigger" href="{{route('pqrsf')}}">PQRSF</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link js-scroll-trigger" target="_blank" href="/garantia.pdf">Garantia de Servicio</a>
     </li>
      <li class="nav-item">
       <a class="nav-link js-scroll-trigger" href="http://clientes.raicesc.net/saldo/global-raices-tv/" target="_blank"><span class="fa-stack fa-2x>
@@ -432,14 +432,14 @@ style="background-color: {{$datos['bg_nav']}}"
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form   method="post" action="{{route('send-email')}}">
+          <form   method="post" action="">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <input class="form-control" id="name" type="text" name="nombre" placeholder="Tu Nombre *" required="required" data-validation-required-message="Por favor ingrese su nombre">
                   <p class="help-block text-danger"></p>
                 </div>
-                {{ csrf_field() }}
+                
                 <div class="form-group">
                   <input class="form-control" id="email" type="email" name="email" placeholder="Tu Email *" required="required" data-validation-required-message="Por favor ingrese su Email.">
                   <p class="help-block text-danger"></p>
